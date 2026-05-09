@@ -3,11 +3,10 @@ extends Node3D
 @onready var sphere = $MeshInstance3D
 
 var panoramas = [
-	preload("res://crossfit_gym_4k.exr"),
-	preload("res://newman_locker_room_4k.exr"),
-	preload("res://climbing_gym_4k.exr"),
-	preload("res://yoga_room_4k.exr"),
-	preload("res://wrestling_gym_4k.exr")
+	preload("res://images/Galeria_Owalna/CAM_20260428120911_0002_D_CAME.JPG"),
+	preload("res://images/Galeria_Owalna/CAM_20260428121245_0004_D_CAME.JPG"),
+	preload("res://images/pokoj_marmurowy/CAM_20260504092949_0014_D_CAME.JPG"),
+	preload("res://images/Przedpokoj_sali_wielkiej/CAM_20260428122918_0008_D_CAME.JPG")
 ]
 
 var current_index = 0

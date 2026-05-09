@@ -1,17 +1,10 @@
 [gd_scene format=3 uid="uid://duh3dphys1mfd"]
 
-[ext_resource type="Texture2D" uid="uid://bylwomyyvu5c" path="res://crossfit_gym_4k.exr" id="1_4nrh5"]
 [ext_resource type="Script" uid="uid://dnk2sw2iijivs" path="res://node_3d.gd" id="1_siv5u"]
 [ext_resource type="Script" uid="uid://dgsti800h35le" path="res://Camera3D.gd" id="1_t2f12"]
 [ext_resource type="Texture2D" uid="uid://bgncrg6yjhpc5" path="res://Right-Chevron--Streamline-Block-Free.png" id="3_6l178"]
 [ext_resource type="Script" uid="uid://cp1evhj7jxppa" path="res://Area3D.gd" id="4_y3fye"]
 [ext_resource type="Texture2D" uid="uid://d3jpt2a5fj1cu" path="res://Left-Chevron--Streamline-Block-Free.png" id="5_kyglb"]
-[ext_resource type="Texture2D" uid="uid://bnf2030ksvwjj" path="res://Gym-1.png" id="7_6vsdt"]
-[ext_resource type="Script" uid="uid://dgpqnor6xoxqr" path="res://HBoxContainer.gd" id="7_m6x31"]
-[ext_resource type="Texture2D" uid="uid://o2l4xnbb67et" path="res://gym-2.png" id="8_uiypu"]
-[ext_resource type="Texture2D" uid="uid://cqibh8dbwxmy4" path="res://gym-3.png" id="9_6plr6"]
-[ext_resource type="Texture2D" uid="uid://qej5ok0a86ce" path="res://gym-4.png" id="10_d42y3"]
-[ext_resource type="Texture2D" uid="uid://wsyu1v0nwwdr" path="res://gym-5.png" id="11_7j0ib"]
 [ext_resource type="Script" uid="uid://iko7tgfwyik8" path="res://Hotspot.gd" id="13_f4xvw"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ghq2d"]
@@ -33,10 +26,13 @@ albedo_texture = ExtResource("5_kyglb")
 [sub_resource type="SphereMesh" id="SphereMesh_fkpo3"]
 flip_faces = true
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jka67"]
+load_path = "res://.godot/imported/crossfit_gym_4k.exr-802dbd7ab30b053d189518e73ca5a24f.bptc.ctex"
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxajr"]
 cull_mode = 2
 shading_mode = 0
-albedo_texture = ExtResource("1_4nrh5")
+albedo_texture = SubResource("CompressedTexture2D_jka67")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_cwv2q"]
 
@@ -67,7 +63,6 @@ shape = SubResource("BoxShape3D_wylxs")
 
 [node name="Arrow_Left" type="MeshInstance3D" parent="Camera3D" unique_id=2025357295]
 transform = Transform3D(0.178, 0, 0, 0, 0.172, 0, 0, 0, 0.1, -1.50987, -0.891581, -2.22123)
-visible = false
 mesh = SubResource("QuadMesh_27wq3")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_25oe4")
@@ -84,55 +79,6 @@ transform = Transform3D(8.067, 0, 0, 0, 7.522, 0, 0, 0, 10, 0, 0.953726, -5.4608
 mesh = SubResource("SphereMesh_fkpo3")
 skeleton = NodePath("../Camera3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_nxajr")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1198507276]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1263796578]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -216.0
-offset_top = -200.0
-grow_horizontal = 0
-grow_vertical = 0
-script = ExtResource("7_m6x31")
-
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/HBoxContainer" unique_id=493717295]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-texture_normal = ExtResource("7_6vsdt")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureButton2" type="TextureButton" parent="CanvasLayer/HBoxContainer" unique_id=1085972430]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-texture_normal = ExtResource("8_uiypu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureButton3" type="TextureButton" parent="CanvasLayer/HBoxContainer" unique_id=81676865]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-texture_normal = ExtResource("9_6plr6")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureButton4" type="TextureButton" parent="CanvasLayer/HBoxContainer" unique_id=1502088179]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-texture_normal = ExtResource("10_d42y3")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="TextureButton5" type="TextureButton" parent="CanvasLayer/HBoxContainer" unique_id=457078806]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-texture_normal = ExtResource("11_7j0ib")
-ignore_texture_size = true
-stretch_mode = 0
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=858415530]
 transform = Transform3D(0.00138037, 0.0886925, -0.370776, -0.331755, 0.04681, -6.85089e-10, 0.0154851, 0.994959, 0.0330518, -0.828224, 0.74262, -8.43121)
